@@ -26,5 +26,5 @@ exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Micha
 'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']}
 labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 res=pd.DataFrame(exam_data,index=labels)
-filt_res=res.query('attempts>2')
+filt_res=res[res['attempts']>2]
 print('Number of attempts in the examination is greater than 2:\n',filt_res)
